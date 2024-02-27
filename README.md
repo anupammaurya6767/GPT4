@@ -26,7 +26,7 @@ The **GPT-4 API** is an interface for interacting with the powerful GPT-4 langua
 2. Install dependencies:
 
     ```bash
-    pip install -r requirements.txt
+    pip install selenium
     ```
 
 3. Set up your GPT-4 credentials (Microsoft account username, password, etc.) in `config.ini`.
