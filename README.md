@@ -59,7 +59,7 @@ Make sure you have the following installed-
 
     ```python
     question = 'What is the meaning of life?'
-    ap.ask_question(question, max_tokens=10)
+    ap.ask_question(question, max_t=10)
     response = ap.get_response()
     ```
 
