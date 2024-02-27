@@ -37,7 +37,12 @@ Make sure you have the following installed-
     pip install selenium
     ```
 
-3. Set up your GPT-4 credentials (Microsoft account username, password, etc.) in `config.ini`.
+    #### Or
+```
+pip install api-gpt4
+```
+
+4. Set up your GPT-4 credentials (Microsoft account username, password, etc.) in `config.ini`.
 
 ## Usage
 
