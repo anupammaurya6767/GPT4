@@ -9,7 +9,7 @@ The **GPT-4 API** is an interface for interacting with the powerful GPT-4 langua
 
 ## Table of Contents
 
--[Prerequisites](#prerequisites)
+- [Prerequisites](#prerequisites)
 - [Installation](#installation)
 - [Usage](#usage)
 - [Features](#features)
