@@ -6,7 +6,10 @@ from api.modules.chat import ChatHandler
 
 class GPT4:
     def __init__(self, config_file):
-        self.driver = webdriver.Chrome()
+
+        options = webdriver.ChromeOptions()
+        options.add_argument('--headless= new')
+        self.driver = webdriver.Chrome(options = options)
         self.login_handler = LoginHandler(self.driver)
         self.config = load_config(config_file)
         self.url = "https://copilot.microsoft.com"
@@ -15,6 +18,7 @@ class GPT4:
         try:
             username = self.config['CREDENTIALS']['username']
             password = self.config['CREDENTIALS']['password']
+            print("login...")
             self.chat_handler = self.login_handler.login(username, password,self.url) 
             print("Login successful")
         except LoginFailedError as e:
