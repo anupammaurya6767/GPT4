@@ -20,8 +20,8 @@ The **GPT-4 API** is an interface for interacting with the powerful GPT-4 langua
 
 Make sure you have the following installed-
 
-    - *Python*: You'll need Python installed on your system.
-    - *Selenium*: We'll be using Selenium for web automation.
+- Python: You'll need Python installed on your system.
+- Selenium: We'll be using Selenium for web automation.
 
 ## Installation
 
