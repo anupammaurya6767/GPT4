@@ -23,17 +23,17 @@ class ChatHandler:
 
     def ask_question(self, question, max_t):
         try:
+
+            total_area = self.wait.until(EC.presence_of_element_located((By.CLASS_NAME, "cib-serp-main"))).shadow_root
+
             self.driver.maximize_window()
             self.max_t = max_t
-            # Wait for the textarea to be visible
-            textarea = self.wait.until(EC.visibility_of_element_located((By.ID, "b_sydWelcomeTemplate_")))
 
-            # Move the cursor to the textarea
-            actions = ActionChains(self.driver)
-            actions.move_to_element(textarea).perform()
-            actions.move_to_element_with_offset(textarea, 0,300)
-            # Click on the textarea
-            actions.click().perform()
+            a1_ = total_area.find_element(By.ID, "cib-action-bar-main").shadow_root
+            a2 = a1_.find_element(By.CSS_SELECTOR,"cib-text-input").shadow_root
+
+            textarea = a2.find_element(By.CLASS_NAME,"text-area")
+            textarea.click()
 
             # Check if the clicked element is accepting text input
             clicked_element = self.driver.switch_to.active_element
@@ -45,7 +45,6 @@ class ChatHandler:
                 raise ElementNotFoundError("The clicked element is not accepting text input.")
         except Exception as e:
             raise ElementNotFoundError(f"Error occurred while asking question: {e}")
-        
         
         pass
 
@@ -65,8 +64,10 @@ class ChatHandler:
                 self.response += re.sub(r'(?i)copilot', 'gpt4', txt.text)
 
             if not self.response:
+                print("enter your query")
                 return {"response": "Please Enter your query"}
             else:
+                print(self.response)
                 return {"response": self.response}
         
         except NoSuchElementException as e:
