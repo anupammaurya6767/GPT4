@@ -1,3 +1,5 @@
+import time
+
 from selenium.common.exceptions import TimeoutException, NoSuchElementException
 from selenium.webdriver.support import expected_conditions as EC
 from selenium.webdriver.support.ui import WebDriverWait
@@ -50,9 +52,11 @@ class LoginHandler:
                  sign_in_button = self.wait.until(EC.presence_of_element_located((By.CLASS_NAME, "ext-button-item ___frx9oy0")))
             if not sign_in_button:
                  sign_in_button = self.wait.until(EC.presence_of_element_located((By.CSS_SELECTOR, "[data-report-event='Signin_Submit']")))
-            self.driver.switch_to.active_element.send_keys(Keys.ENTER)
+            sign_in_button.click()
+            # self.driver.switch_to.active_element.send_keys(Keys.ENTER)
 
             # Click stay signed in
+            time.sleep(2)
             stay_sign_in = self.wait.until(EC.presence_of_element_located((By.CSS_SELECTOR, "[data-testid='post-redirect-form']")))
             self.driver.switch_to.active_element.send_keys(Keys.ENTER)
 
