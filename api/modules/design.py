@@ -24,7 +24,7 @@ class DesignHandler:
 
     def design(self, query, max_t):
         try:
-
+            self.response = []
             total_area = self.wait.until(EC.presence_of_element_located((By.CLASS_NAME, "cib-serp-main"))).shadow_root
 
             self.driver.maximize_window()
@@ -32,9 +32,6 @@ class DesignHandler:
 
             a1_ = total_area.find_element(By.ID, "cib-action-bar-main").shadow_root
             a2 = total_area.find_element(By.CSS_SELECTOR,"cib-side-panel").shadow_root
-
-            a3 = a2.find_element(By.CSS_SELECTOR,"[personatype='Designer']")
-            a3.click()
 
             a4 = a1_.find_element(By.CSS_SELECTOR,"cib-text-input").shadow_root
 
@@ -45,7 +42,7 @@ class DesignHandler:
             clicked_element = self.driver.switch_to.active_element
             if clicked_element.is_enabled() and clicked_element.is_displayed():
                 # Type the question in the element
-                clicked_element.send_keys(query)
+                clicked_element.send_keys('create an image '+query)
                 clicked_element.send_keys(Keys.ENTER)
                 response_area = self.wait.until(EC.presence_of_element_located((By.CLASS_NAME, "cib-serp-main"))).shadow_root
                 a1 = response_area.find_element(By.ID, "cib-conversation-main").shadow_root
@@ -68,6 +65,7 @@ class DesignHandler:
                 
                 self.driver.switch_to.default_content()
                 return self.response
+            
             else:
                 raise ElementNotFoundError("The clicked element is not accepting text input.")
         except Exception as e:
