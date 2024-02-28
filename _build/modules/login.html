@@ -1,0 +1,176 @@
+<!DOCTYPE html>
+<html class="writer-html5" lang="Python" data-content_root="../">
+<head>
+  <meta charset="utf-8" /><meta name="viewport" content="width=device-width, initial-scale=1" />
+
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>LoginHandler &mdash; GPT4 1.0.0 documentation</title>
+      <link rel="stylesheet" type="text/css" href="../_static/pygments.css?v=80d5e7a1" />
+      <link rel="stylesheet" type="text/css" href="../_static/css/theme.css?v=19f00094" />
+
+  
+  <!--[if lt IE 9]>
+    <script src="../_static/js/html5shiv.min.js"></script>
+  <![endif]-->
+  
+        <script src="../_static/jquery.js?v=5d32c60e"></script>
+        <script src="../_static/_sphinx_javascript_frameworks_compat.js?v=2cd50e6c"></script>
+        <script src="../_static/documentation_options.js?v=8eae9801"></script>
+        <script src="../_static/doctools.js?v=888ff710"></script>
+        <script src="../_static/sphinx_highlight.js?v=dc90522c"></script>
+    <script src="../_static/js/theme.js"></script>
+    <link rel="index" title="Index" href="../genindex.html" />
+    <link rel="search" title="Search" href="../search.html" />
+    <link rel="next" title="DesignHandler" href="design.html" />
+    <link rel="prev" title="ChatHandler documentation" href="chat.html" /> 
+</head>
+
+<body class="wy-body-for-nav"> 
+  <div class="wy-grid-for-nav">
+    <nav data-toggle="wy-nav-shift" class="wy-nav-side">
+      <div class="wy-side-scroll">
+        <div class="wy-side-nav-search" >
+
+          
+          
+          <a href="../index.html" class="icon icon-home">
+            GPT4
+          </a>
+<div role="search">
+  <form id="rtd-search-form" class="wy-form" action="../search.html" method="get">
+    <input type="text" name="q" placeholder="Search docs" aria-label="Search docs" />
+    <input type="hidden" name="check_keywords" value="yes" />
+    <input type="hidden" name="area" value="default" />
+  </form>
+</div>
+        </div><div class="wy-menu wy-menu-vertical" data-spy="affix" role="navigation" aria-label="Navigation menu">
+              <p class="caption" role="heading"><span class="caption-text">Contents:</span></p>
+<ul class="current">
+<li class="toctree-l1"><a class="reference internal" href="../installation.html">Installation</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../usage.html">Usage</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../gpt4.html">GPT4</a></li>
+<li class="toctree-l1"><a class="reference internal" href="chat.html">ChatHandler documentation</a></li>
+<li class="toctree-l1"><a class="reference internal" href="chat.html#designhandler">DesignHandler</a></li>
+<li class="toctree-l1 current"><a class="current reference internal" href="#">LoginHandler</a><ul>
+<li class="toctree-l2"><a class="reference internal" href="#class-overview">Class Overview</a></li>
+<li class="toctree-l2"><a class="reference internal" href="#class-methods">Class Methods</a><ul>
+<li class="toctree-l3"><a class="reference internal" href="#init-self-driver">_init_(self, driver)</a></li>
+<li class="toctree-l3"><a class="reference internal" href="#login-self-username-password-url">login(self, username, password, url)</a></li>
+</ul>
+</li>
+<li class="toctree-l2"><a class="reference internal" href="#exceptions">Exceptions</a><ul>
+<li class="toctree-l3"><a class="reference internal" href="#elementnotfounderror">ElementNotFoundError</a></li>
+<li class="toctree-l3"><a class="reference internal" href="#loginfailederror">LoginFailedError</a></li>
+</ul>
+</li>
+</ul>
+</li>
+<li class="toctree-l1"><a class="reference internal" href="design.html">DesignHandler</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../contributing.html">Contributing</a></li>
+</ul>
+
+        </div>
+      </div>
+    </nav>
+
+    <section data-toggle="wy-nav-shift" class="wy-nav-content-wrap"><nav class="wy-nav-top" aria-label="Mobile navigation menu" >
+          <i data-toggle="wy-nav-top" class="fa fa-bars"></i>
+          <a href="../index.html">GPT4</a>
+      </nav>
+
+      <div class="wy-nav-content">
+        <div class="rst-content">
+          <div role="navigation" aria-label="Page navigation">
+  <ul class="wy-breadcrumbs">
+      <li><a href="../index.html" class="icon icon-home" aria-label="Home"></a></li>
+      <li class="breadcrumb-item active">LoginHandler</li>
+      <li class="wy-breadcrumbs-aside">
+            <a href="../_sources/modules/login.rst.txt" rel="nofollow"> View page source</a>
+      </li>
+  </ul>
+  <hr/>
+</div>
+          <div role="main" class="document" itemscope="itemscope" itemtype="http://schema.org/Article">
+           <div itemprop="articleBody">
+             
+  <section id="loginhandler">
+<h1>LoginHandler<a class="headerlink" href="#loginhandler" title="Link to this heading"></a></h1>
+<section id="class-overview">
+<h2>Class Overview<a class="headerlink" href="#class-overview" title="Link to this heading"></a></h2>
+<p>The LoginHandler class is responsible for handling the login functionality for a website using Selenium. It provides methods to perform the login process.</p>
+</section>
+<section id="class-methods">
+<h2>Class Methods<a class="headerlink" href="#class-methods" title="Link to this heading"></a></h2>
+<section id="init-self-driver">
+<h3>_init_(self, driver)<a class="headerlink" href="#init-self-driver" title="Link to this heading"></a></h3>
+<p>Initializes a new instance of the LoginHandler class.</p>
+<ul class="simple">
+<li><p><em>driver</em>: The Selenium webdriver instance.</p></li>
+</ul>
+</section>
+<section id="login-self-username-password-url">
+<h3>login(self, username, password, url)<a class="headerlink" href="#login-self-username-password-url" title="Link to this heading"></a></h3>
+<p>Performs the login process.</p>
+<ul class="simple">
+<li><p><em>username</em>: The username or email address for the login.</p></li>
+<li><p><em>password</em>: The password for the login.</p></li>
+<li><p><em>url</em>: The URL of the login page.</p></li>
+</ul>
+<p>Steps:
+1. Navigates to the specified URL.
+2. Clicks the &quot;Sign in&quot; button.
+3. Clicks the &quot;Sign in with Microsoft&quot; button.
+4. Enters the email/username.
+5. Clicks the &quot;Next&quot; button.
+6. Enters the password.
+7. Clicks the &quot;Sign in&quot; button.
+8. Clicks the &quot;Stay signed in&quot; button.
+9. Waits for the home button to be displayed, indicating a successful login.
+10. Returns the webdriver instance.</p>
+</section>
+</section>
+<section id="exceptions">
+<h2>Exceptions<a class="headerlink" href="#exceptions" title="Link to this heading"></a></h2>
+<section id="elementnotfounderror">
+<h3>ElementNotFoundError<a class="headerlink" href="#elementnotfounderror" title="Link to this heading"></a></h3>
+<p>Raised when an element is not found during the login process.</p>
+</section>
+<section id="loginfailederror">
+<h3>LoginFailedError<a class="headerlink" href="#loginfailederror" title="Link to this heading"></a></h3>
+<p>Raised when the login fails.</p>
+</section>
+</section>
+</section>
+
+
+           </div>
+          </div>
+          <footer><div class="rst-footer-buttons" role="navigation" aria-label="Footer">
+        <a href="chat.html" class="btn btn-neutral float-left" title="ChatHandler documentation" accesskey="p" rel="prev"><span class="fa fa-arrow-circle-left" aria-hidden="true"></span> Previous</a>
+        <a href="design.html" class="btn btn-neutral float-right" title="DesignHandler" accesskey="n" rel="next">Next <span class="fa fa-arrow-circle-right" aria-hidden="true"></span></a>
+    </div>
+
+  <hr/>
+
+  <div role="contentinfo">
+    <p>&#169; Copyright 2024, Anupam Maurya.</p>
+  </div>
+
+  Built with <a href="https://www.sphinx-doc.org/">Sphinx</a> using a
+    <a href="https://github.com/readthedocs/sphinx_rtd_theme">theme</a>
+    provided by <a href="https://readthedocs.org">Read the Docs</a>.
+   
+
+</footer>
+        </div>
+      </div>
+    </section>
+  </div>
+  <script>
+      jQuery(function () {
+          SphinxRtdTheme.Navigation.enable(true);
+      });
+  </script> 
+
+</body>
+</html>

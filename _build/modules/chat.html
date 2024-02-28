@@ -1,0 +1,225 @@
+<!DOCTYPE html>
+<html class="writer-html5" lang="Python" data-content_root="../">
+<head>
+  <meta charset="utf-8" /><meta name="viewport" content="width=device-width, initial-scale=1" />
+
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>ChatHandler documentation &mdash; GPT4 1.0.0 documentation</title>
+      <link rel="stylesheet" type="text/css" href="../_static/pygments.css?v=80d5e7a1" />
+      <link rel="stylesheet" type="text/css" href="../_static/css/theme.css?v=19f00094" />
+
+  
+  <!--[if lt IE 9]>
+    <script src="../_static/js/html5shiv.min.js"></script>
+  <![endif]-->
+  
+        <script src="../_static/jquery.js?v=5d32c60e"></script>
+        <script src="../_static/_sphinx_javascript_frameworks_compat.js?v=2cd50e6c"></script>
+        <script src="../_static/documentation_options.js?v=8eae9801"></script>
+        <script src="../_static/doctools.js?v=888ff710"></script>
+        <script src="../_static/sphinx_highlight.js?v=dc90522c"></script>
+    <script src="../_static/js/theme.js"></script>
+    <link rel="index" title="Index" href="../genindex.html" />
+    <link rel="search" title="Search" href="../search.html" />
+    <link rel="next" title="LoginHandler" href="login.html" />
+    <link rel="prev" title="GPT4" href="../gpt4.html" /> 
+</head>
+
+<body class="wy-body-for-nav"> 
+  <div class="wy-grid-for-nav">
+    <nav data-toggle="wy-nav-shift" class="wy-nav-side">
+      <div class="wy-side-scroll">
+        <div class="wy-side-nav-search" >
+
+          
+          
+          <a href="../index.html" class="icon icon-home">
+            GPT4
+          </a>
+<div role="search">
+  <form id="rtd-search-form" class="wy-form" action="../search.html" method="get">
+    <input type="text" name="q" placeholder="Search docs" aria-label="Search docs" />
+    <input type="hidden" name="check_keywords" value="yes" />
+    <input type="hidden" name="area" value="default" />
+  </form>
+</div>
+        </div><div class="wy-menu wy-menu-vertical" data-spy="affix" role="navigation" aria-label="Navigation menu">
+              <p class="caption" role="heading"><span class="caption-text">Contents:</span></p>
+<ul class="current">
+<li class="toctree-l1"><a class="reference internal" href="../installation.html">Installation</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../usage.html">Usage</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../gpt4.html">GPT4</a></li>
+<li class="toctree-l1 current"><a class="current reference internal" href="#">ChatHandler documentation</a><ul>
+<li class="toctree-l2"><a class="reference internal" href="#constructor">Constructor</a><ul>
+<li class="toctree-l3"><a class="reference internal" href="#init-self-driver">_init_(self, driver)</a></li>
+</ul>
+</li>
+<li class="toctree-l2"><a class="reference internal" href="#properties">Properties</a></li>
+<li class="toctree-l2"><a class="reference internal" href="#methods">Methods</a><ul>
+<li class="toctree-l3"><a class="reference internal" href="#ask-question-self-question-max-t">ask_question(self, question, max_t)</a></li>
+<li class="toctree-l3"><a class="reference internal" href="#get-response-self">get_response(self)</a></li>
+</ul>
+</li>
+</ul>
+</li>
+<li class="toctree-l1"><a class="reference internal" href="#designhandler">DesignHandler</a><ul>
+<li class="toctree-l2"><a class="reference internal" href="#id1">Methods</a><ul>
+<li class="toctree-l3"><a class="reference internal" href="#id2">\init\(self, driver)</a></li>
+<li class="toctree-l3"><a class="reference internal" href="#design-self-query-max-t">design(self, query, max_t)</a></li>
+</ul>
+</li>
+</ul>
+</li>
+<li class="toctree-l1"><a class="reference internal" href="login.html">LoginHandler</a></li>
+<li class="toctree-l1"><a class="reference internal" href="design.html">DesignHandler</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../contributing.html">Contributing</a></li>
+</ul>
+
+        </div>
+      </div>
+    </nav>
+
+    <section data-toggle="wy-nav-shift" class="wy-nav-content-wrap"><nav class="wy-nav-top" aria-label="Mobile navigation menu" >
+          <i data-toggle="wy-nav-top" class="fa fa-bars"></i>
+          <a href="../index.html">GPT4</a>
+      </nav>
+
+      <div class="wy-nav-content">
+        <div class="rst-content">
+          <div role="navigation" aria-label="Page navigation">
+  <ul class="wy-breadcrumbs">
+      <li><a href="../index.html" class="icon icon-home" aria-label="Home"></a></li>
+      <li class="breadcrumb-item active">ChatHandler documentation</li>
+      <li class="wy-breadcrumbs-aside">
+            <a href="../_sources/modules/chat.rst.txt" rel="nofollow"> View page source</a>
+      </li>
+  </ul>
+  <hr/>
+</div>
+          <div role="main" class="document" itemscope="itemscope" itemtype="http://schema.org/Article">
+           <div itemprop="articleBody">
+             
+  <section id="chathandler-documentation">
+<h1>ChatHandler documentation<a class="headerlink" href="#chathandler-documentation" title="Link to this heading"></a></h1>
+<p>This class represents a chat handler for a chatbot. It is responsible for interacting with the chat interface and retrieving responses.</p>
+<section id="constructor">
+<h2>Constructor<a class="headerlink" href="#constructor" title="Link to this heading"></a></h2>
+<section id="init-self-driver">
+<h3>_init_(self, driver)<a class="headerlink" href="#init-self-driver" title="Link to this heading"></a></h3>
+<ul class="simple">
+<li><p><em>driver</em> - an instance of the Selenium WebDriver</p></li>
+</ul>
+</section>
+</section>
+<section id="properties">
+<h2>Properties<a class="headerlink" href="#properties" title="Link to this heading"></a></h2>
+<ul class="simple">
+<li><p><em>driver</em>: The Selenium WebDriver instance used by the ChatHandler.</p></li>
+<li><p><em>wait</em>: An instance of WebDriverWait used for waiting for elements to be present.</p></li>
+<li><p><em>response</em>: A string that holds the response obtained from the chatbot.</p></li>
+<li><p><em>max_t</em>: An integer that represents the maximum time to wait for a response from the chatbot.</p></li>
+</ul>
+</section>
+<section id="methods">
+<h2>Methods<a class="headerlink" href="#methods" title="Link to this heading"></a></h2>
+<section id="ask-question-self-question-max-t">
+<h3>ask_question(self, question, max_t)<a class="headerlink" href="#ask-question-self-question-max-t" title="Link to this heading"></a></h3>
+<p>This method is used to ask a question to the chatbot.</p>
+<ul class="simple">
+<li><p><em>question</em> - a string representing the question to ask the chatbot.</p></li>
+<li><p><em>max_t</em> - an integer representing the maximum time to wait for a response.</p></li>
+</ul>
+</section>
+<section id="get-response-self">
+<h3>get_response(self)<a class="headerlink" href="#get-response-self" title="Link to this heading"></a></h3>
+<p>This method is used to retrieve the response from the chatbot.</p>
+<p>Returns a dictionary with the response, or raises an exception if the response cannot be retrieved.</p>
+</section>
+</section>
+</section>
+<section id="designhandler">
+<h1>DesignHandler<a class="headerlink" href="#designhandler" title="Link to this heading"></a></h1>
+<p>This class is responsible for interacting with the design feature of the website.</p>
+<section id="id1">
+<h2>Methods<a class="headerlink" href="#id1" title="Link to this heading"></a></h2>
+<section id="id2">
+<h3>\init\(self, driver)<a class="headerlink" href="#id2" title="Link to this heading"></a></h3>
+<ul class="simple">
+<li><dl class="simple">
+<dt>Parameters:</dt><dd><ul>
+<li><p><em>driver</em> (selenium.webdriver): The WebDriver instance to use for interacting with the website.</p></li>
+</ul>
+</dd>
+</dl>
+</li>
+<li><dl class="simple">
+<dt>Description:</dt><dd><ul>
+<li><p>Initializes a new instance of the DesignHandler class.</p></li>
+</ul>
+</dd>
+</dl>
+</li>
+</ul>
+</section>
+<section id="design-self-query-max-t">
+<h3>design(self, query, max_t)<a class="headerlink" href="#design-self-query-max-t" title="Link to this heading"></a></h3>
+<ul class="simple">
+<li><dl class="simple">
+<dt>Parameters:</dt><dd><ul>
+<li><p><em>query</em> (str): The query to ask.</p></li>
+<li><p><em>max_t</em> (int): The maximum time to wait for the response.</p></li>
+</ul>
+</dd>
+</dl>
+</li>
+<li><dl class="simple">
+<dt>Returns:</dt><dd><ul>
+<li><p><em>response</em> (list): A list of image URLs.</p></li>
+</ul>
+</dd>
+</dl>
+</li>
+<li><dl class="simple">
+<dt>Description:</dt><dd><ul>
+<li><p>Sends a query to the website and retrieves a list of image URLs as a response.</p></li>
+</ul>
+</dd>
+</dl>
+</li>
+</ul>
+</section>
+</section>
+</section>
+
+
+           </div>
+          </div>
+          <footer><div class="rst-footer-buttons" role="navigation" aria-label="Footer">
+        <a href="../gpt4.html" class="btn btn-neutral float-left" title="GPT4" accesskey="p" rel="prev"><span class="fa fa-arrow-circle-left" aria-hidden="true"></span> Previous</a>
+        <a href="login.html" class="btn btn-neutral float-right" title="LoginHandler" accesskey="n" rel="next">Next <span class="fa fa-arrow-circle-right" aria-hidden="true"></span></a>
+    </div>
+
+  <hr/>
+
+  <div role="contentinfo">
+    <p>&#169; Copyright 2024, Anupam Maurya.</p>
+  </div>
+
+  Built with <a href="https://www.sphinx-doc.org/">Sphinx</a> using a
+    <a href="https://github.com/readthedocs/sphinx_rtd_theme">theme</a>
+    provided by <a href="https://readthedocs.org">Read the Docs</a>.
+   
+
+</footer>
+        </div>
+      </div>
+    </section>
+  </div>
+  <script>
+      jQuery(function () {
+          SphinxRtdTheme.Navigation.enable(true);
+      });
+  </script> 
+
+</body>
+</html>

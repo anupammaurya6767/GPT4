@@ -1,0 +1,273 @@
+<!DOCTYPE html>
+<html class="writer-html5" lang="Python" data-content_root="./">
+<head>
+  <meta charset="utf-8" /><meta name="viewport" content="width=device-width, initial-scale=1" />
+
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>GPT4 Documentation &mdash; GPT4 1.0.0 documentation</title>
+      <link rel="stylesheet" type="text/css" href="_static/pygments.css?v=80d5e7a1" />
+      <link rel="stylesheet" type="text/css" href="_static/css/theme.css?v=19f00094" />
+
+  
+  <!--[if lt IE 9]>
+    <script src="_static/js/html5shiv.min.js"></script>
+  <![endif]-->
+  
+        <script src="_static/jquery.js?v=5d32c60e"></script>
+        <script src="_static/_sphinx_javascript_frameworks_compat.js?v=2cd50e6c"></script>
+        <script src="_static/documentation_options.js?v=8eae9801"></script>
+        <script src="_static/doctools.js?v=888ff710"></script>
+        <script src="_static/sphinx_highlight.js?v=dc90522c"></script>
+    <script src="_static/js/theme.js"></script>
+    <link rel="index" title="Index" href="genindex.html" />
+    <link rel="search" title="Search" href="search.html" />
+    <link rel="next" title="Installation" href="installation.html" /> 
+</head>
+
+<body class="wy-body-for-nav"> 
+  <div class="wy-grid-for-nav">
+    <nav data-toggle="wy-nav-shift" class="wy-nav-side">
+      <div class="wy-side-scroll">
+        <div class="wy-side-nav-search" >
+
+          
+          
+          <a href="#" class="icon icon-home">
+            GPT4
+          </a>
+<div role="search">
+  <form id="rtd-search-form" class="wy-form" action="search.html" method="get">
+    <input type="text" name="q" placeholder="Search docs" aria-label="Search docs" />
+    <input type="hidden" name="check_keywords" value="yes" />
+    <input type="hidden" name="area" value="default" />
+  </form>
+</div>
+        </div><div class="wy-menu wy-menu-vertical" data-spy="affix" role="navigation" aria-label="Navigation menu">
+              <p class="caption" role="heading"><span class="caption-text">Contents:</span></p>
+<ul>
+<li class="toctree-l1"><a class="reference internal" href="installation.html">Installation</a></li>
+<li class="toctree-l1"><a class="reference internal" href="usage.html">Usage</a></li>
+<li class="toctree-l1"><a class="reference internal" href="gpt4.html">GPT4</a></li>
+<li class="toctree-l1"><a class="reference internal" href="modules/chat.html">ChatHandler documentation</a></li>
+<li class="toctree-l1"><a class="reference internal" href="modules/chat.html#designhandler">DesignHandler</a></li>
+<li class="toctree-l1"><a class="reference internal" href="modules/login.html">LoginHandler</a></li>
+<li class="toctree-l1"><a class="reference internal" href="modules/design.html">DesignHandler</a></li>
+<li class="toctree-l1"><a class="reference internal" href="contributing.html">Contributing</a></li>
+</ul>
+
+        </div>
+      </div>
+    </nav>
+
+    <section data-toggle="wy-nav-shift" class="wy-nav-content-wrap"><nav class="wy-nav-top" aria-label="Mobile navigation menu" >
+          <i data-toggle="wy-nav-top" class="fa fa-bars"></i>
+          <a href="#">GPT4</a>
+      </nav>
+
+      <div class="wy-nav-content">
+        <div class="rst-content">
+          <div role="navigation" aria-label="Page navigation">
+  <ul class="wy-breadcrumbs">
+      <li><a href="#" class="icon icon-home" aria-label="Home"></a></li>
+      <li class="breadcrumb-item active">GPT4 Documentation</li>
+      <li class="wy-breadcrumbs-aside">
+            <a href="_sources/index.rst.txt" rel="nofollow"> View page source</a>
+      </li>
+  </ul>
+  <hr/>
+</div>
+          <div role="main" class="document" itemscope="itemscope" itemtype="http://schema.org/Article">
+           <div itemprop="articleBody">
+             
+  <section id="gpt4-documentation">
+<h1>GPT4 Documentation<a class="headerlink" href="#gpt4-documentation" title="Link to this heading"></a></h1>
+<p>Welcome to the documentation for the GPT4 project. The GPT4 API project aims to provide an automated interface for interacting with the GPT-4 (Generative Pre-trained Transformer 4) model developed by OpenAI. GPT-4 is a state-of-the-art natural language processing model capable of generating human-like text based on input prompts.</p>
+<div class="literal-block-wrapper docutils container" id="id1">
+<div class="code-block-caption"><span class="caption-text">README</span><a class="headerlink" href="#id1" title="Link to this code"></a></div>
+<div class="highlight-markdown notranslate"><div class="highlight"><pre><span></span><span class="gh"># GPT-4 API</span>
+&lt;img align=&#39;right&#39; src=&quot;https://github.com/anupammaurya6767/GPT4/blob/main/assets/Designer.png&quot; width=&quot;230&quot;&gt;
+The GPT4 API project aims to provide an automated interface for interacting with the GPT-4 (Generative Pre-trained Transformer 4) model developed by OpenAI. GPT-4 is a state-of-the-art natural language processing model capable of generating human-like text based on input prompts.
+
+
+<span class="gu">## Description</span>
+
+The <span class="gs">**GPT-4 API**</span> is an interface for interacting with the powerful GPT-4 language model. It allows you to generate natural language text, perform question-answering tasks, and more. Whether you&#39;re building chatbots, content generators, or creative writing tools, GPT-4 has got you covered!
+
+<span class="gu">## Table of Contents</span>
+
+<span class="k">-</span><span class="w"> </span>[<span class="nt">Prerequisites</span>](<span class="na">#prerequisites</span>)
+<span class="k">-</span><span class="w"> </span>[<span class="nt">Installation</span>](<span class="na">#installation</span>)
+<span class="k">-</span><span class="w"> </span>[<span class="nt">Usage</span>](<span class="na">#usage</span>)
+<span class="k">-</span><span class="w"> </span>[<span class="nt">Features</span>](<span class="na">#features</span>)
+<span class="k">-</span><span class="w"> </span>[<span class="nt">Contributing</span>](<span class="na">#contributing</span>)
+<span class="k">-</span><span class="w"> </span>[<span class="nt">License</span>](<span class="na">#license</span>)
+
+<span class="gu">## Prerequisites</span>
+
+Make sure you have the following installed-
+
+<span class="k">-</span><span class="w"> </span>Python: You&#39;ll need Python installed on your system.
+<span class="k">-</span><span class="w"> </span>Selenium: We&#39;ll be using Selenium for web automation.
+
+<span class="gu">## Installation</span>
+
+<span class="k">1.</span> Clone this repository:
+
+<span class="sb">    ```bash</span>
+<span class="w">    </span>git<span class="w"> </span>clone<span class="w"> </span>https://github.com/anupammaurya6767/GPT4.git
+<span class="sb">    ```</span>
+
+<span class="k">2.</span> Install dependencies:
+
+<span class="sb">    ```bash</span>
+<span class="w">    </span>pip<span class="w"> </span>install<span class="w"> </span>selenium
+<span class="sb">    ```</span>
+
+    #### Or
+<span class="sb">```</span>
+<span class="sb">pip install api-gpt4</span>
+<span class="sb">```</span>
+
+<span class="k">4.</span> Set up your GPT-4 credentials (Microsoft account username, password, etc.) in <span class="sb">`config.ini`</span>.
+
+<span class="gu">## Usage</span>
+
+<span class="k">1.</span> Initialize the GPT-4 API:
+
+<span class="sb">    ```python</span>
+    <span class="kn">from</span> <span class="nn">api.gpt4</span> <span class="kn">import</span> <span class="n">GPT4</span>
+
+    <span class="n">ap</span> <span class="o">=</span> <span class="n">GPT4</span><span class="p">(</span><span class="n">config_file</span><span class="o">=</span><span class="s1">&#39;config.ini&#39;</span><span class="p">)</span>
+<span class="sb">    ```</span>
+
+<span class="k">2.</span> Log in to the GPT-4 service:
+
+<span class="sb">    ```python</span>
+    <span class="n">ap</span><span class="o">.</span><span class="n">login</span><span class="p">()</span>
+<span class="sb">    ```</span>
+
+<span class="k">3.</span> Ask questions or generate text:
+
+<span class="sb">    ```python</span>
+    <span class="n">question</span> <span class="o">=</span> <span class="s1">&#39;What is the meaning of life?&#39;</span>
+    <span class="n">ap</span><span class="o">.</span><span class="n">ask_question</span><span class="p">(</span><span class="n">question</span><span class="p">,</span> <span class="n">max_t</span><span class="o">=</span><span class="mi">10</span><span class="p">)</span>
+    <span class="n">response</span> <span class="o">=</span> <span class="n">ap</span><span class="o">.</span><span class="n">get_response</span><span class="p">()</span>
+<span class="sb">    ```</span>
+
+<span class="k">4.</span> Close the API connection when done:
+
+<span class="sb">    ```python</span>
+    <span class="n">ap</span><span class="o">.</span><span class="n">close</span><span class="p">()</span>
+<span class="sb">    ```</span>
+
+<span class="gu">## Features</span>
+
+<span class="k">-</span><span class="w"> </span><span class="gs">**Natural Language Generation**</span>: Create human-like text.
+<span class="k">-</span><span class="w"> </span><span class="gs">**Question-Answering**</span>: Get accurate answers to queries.
+<span class="k">-</span><span class="w"> </span><span class="gs">**Customizable**</span>: Fine-tune GPT-4 for specific tasks.
+<span class="k">-</span><span class="w"> </span><span class="gs">**Scalable**</span>: Handle large volumes of requests.
+
+<span class="gu">## Contributing</span>
+
+Contributions are welcome! If you find a bug or have an enhancement idea, please open an issue or submit a pull request.
+
+<span class="gu">## License</span>
+
+This project is licensed under the MIT License - see the [<span class="nt">LICENSE</span>](<span class="na">LICENSE</span>) file for details.
+</pre></div>
+</div>
+</div>
+<div class="toctree-wrapper compound">
+<p class="caption" role="heading"><span class="caption-text">Contents:</span></p>
+<ul>
+<li class="toctree-l1"><a class="reference internal" href="installation.html">Installation</a></li>
+<li class="toctree-l1"><a class="reference internal" href="usage.html">Usage</a></li>
+<li class="toctree-l1"><a class="reference internal" href="gpt4.html">GPT4</a><ul>
+<li class="toctree-l2"><a class="reference internal" href="gpt4.html#installation">Installation</a></li>
+<li class="toctree-l2"><a class="reference internal" href="gpt4.html#usage">Usage</a></li>
+</ul>
+</li>
+<li class="toctree-l1"><a class="reference internal" href="modules/chat.html">ChatHandler documentation</a><ul>
+<li class="toctree-l2"><a class="reference internal" href="modules/chat.html#constructor">Constructor</a></li>
+<li class="toctree-l2"><a class="reference internal" href="modules/chat.html#properties">Properties</a></li>
+<li class="toctree-l2"><a class="reference internal" href="modules/chat.html#methods">Methods</a></li>
+</ul>
+</li>
+<li class="toctree-l1"><a class="reference internal" href="modules/chat.html#designhandler">DesignHandler</a><ul>
+<li class="toctree-l2"><a class="reference internal" href="modules/chat.html#id1">Methods</a></li>
+</ul>
+</li>
+<li class="toctree-l1"><a class="reference internal" href="modules/login.html">LoginHandler</a><ul>
+<li class="toctree-l2"><a class="reference internal" href="modules/login.html#class-overview">Class Overview</a></li>
+<li class="toctree-l2"><a class="reference internal" href="modules/login.html#class-methods">Class Methods</a></li>
+<li class="toctree-l2"><a class="reference internal" href="modules/login.html#exceptions">Exceptions</a></li>
+</ul>
+</li>
+<li class="toctree-l1"><a class="reference internal" href="modules/design.html">DesignHandler</a><ul>
+<li class="toctree-l2"><a class="reference internal" href="modules/design.html#methods">Methods</a></li>
+</ul>
+</li>
+<li class="toctree-l1"><a class="reference internal" href="contributing.html">Contributing</a></li>
+</ul>
+</div>
+<section id="installation">
+<h2>Installation<a class="headerlink" href="#installation" title="Link to this heading"></a></h2>
+<p>To install GPT4, follow the instructions in the [installation guide](installation.rst).</p>
+</section>
+<section id="usage">
+<h2>Usage<a class="headerlink" href="#usage" title="Link to this heading"></a></h2>
+<p>Learn how to use GPT4  by reading the [usage guide](usage.rst).</p>
+</section>
+<section id="gpt4">
+<h2>GPT4<a class="headerlink" href="#gpt4" title="Link to this heading"></a></h2>
+<p>Refer to the [configuration guide](gpt4.rst) for details.</p>
+</section>
+<section id="chat-module">
+<h2>Chat Module<a class="headerlink" href="#chat-module" title="Link to this heading"></a></h2>
+<p>The Chat module in GPT4 allows you to ask queries and get response. Read more in the [Chat module documentation](modules/chat.rst).</p>
+</section>
+<section id="login-module">
+<h2>Login Module<a class="headerlink" href="#login-module" title="Link to this heading"></a></h2>
+<p>The Login module in GPT4 allows you to login in the GPT4. Read more in the [Word module documentation](modules/login.rst).</p>
+</section>
+<section id="design-module">
+<h2>Design Module<a class="headerlink" href="#design-module" title="Link to this heading"></a></h2>
+<p>The Design module in GPT4 allows you to generate Images. Read more in the [URL module documentation](modules/design.rst).</p>
+</section>
+<section id="contributing">
+<h2>Contributing<a class="headerlink" href="#contributing" title="Link to this heading"></a></h2>
+<p>If you'd like to contribute to GPT4, please follow the guidelines in the [contributing guide](contributing.rst).</p>
+</section>
+</section>
+
+
+           </div>
+          </div>
+          <footer><div class="rst-footer-buttons" role="navigation" aria-label="Footer">
+        <a href="installation.html" class="btn btn-neutral float-right" title="Installation" accesskey="n" rel="next">Next <span class="fa fa-arrow-circle-right" aria-hidden="true"></span></a>
+    </div>
+
+  <hr/>
+
+  <div role="contentinfo">
+    <p>&#169; Copyright 2024, Anupam Maurya.</p>
+  </div>
+
+  Built with <a href="https://www.sphinx-doc.org/">Sphinx</a> using a
+    <a href="https://github.com/readthedocs/sphinx_rtd_theme">theme</a>
+    provided by <a href="https://readthedocs.org">Read the Docs</a>.
+   
+
+</footer>
+        </div>
+      </div>
+    </section>
+  </div>
+  <script>
+      jQuery(function () {
+          SphinxRtdTheme.Navigation.enable(true);
+      });
+  </script> 
+
+</body>
+</html>
