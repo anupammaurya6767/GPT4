@@ -30,9 +30,14 @@ class ChatHandler:
             self.max_t = max_t
 
             a1_ = total_area.find_element(By.ID, "cib-action-bar-main").shadow_root
-            a2 = a1_.find_element(By.CSS_SELECTOR,"cib-text-input").shadow_root
+            a2 = total_area.find_element(By.CSS_SELECTOR,"cib-side-panel").shadow_root
 
-            textarea = a2.find_element(By.CLASS_NAME,"text-area")
+            a3 = a2.find_element(By.CSS_SELECTOR,"[personatype='Copilot']")
+            a3.click()
+
+            a4 = a1_.find_element(By.CSS_SELECTOR,"cib-text-input").shadow_root
+
+            textarea = a4.find_element(By.CLASS_NAME,"text-area")
             textarea.click()
 
             # Check if the clicked element is accepting text input
@@ -67,7 +72,6 @@ class ChatHandler:
                 print("enter your query")
                 return {"response": "Please Enter your query"}
             else:
-                print(self.response)
                 return {"response": self.response}
         
         except NoSuchElementException as e:

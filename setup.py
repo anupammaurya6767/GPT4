@@ -18,6 +18,7 @@ setup(
     packages=find_packages(),
     python_requires='>=3.11',  # Updated version specifier
     install_requires=[
-        'selenium==4.18.1'
+        'selenium==4.18.1',
+        'beautifulsoup4==4.12.2'
     ],
 )

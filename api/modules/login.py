@@ -6,7 +6,6 @@ from selenium.webdriver.support.ui import WebDriverWait
 from selenium.webdriver.common.by import By
 from api.handlers.exceptions import ElementNotFoundError, LoginFailedError
 from selenium.webdriver.common.keys import Keys
-from api.modules.chat import ChatHandler
 
 class LoginHandler:
     def __init__(self, driver):
@@ -63,8 +62,7 @@ class LoginHandler:
             # Wait for home button
             home_button = self.wait.until(EC.presence_of_element_located((By.XPATH, "/html/body/header/div/a")))
             assert home_button.is_displayed(), "Home button not displayed, login failed"
-            chathandler = ChatHandler(self.driver)
-            return chathandler
+            return self.driver
         
         except TimeoutException as e:
             raise ElementNotFoundError(f"Element not found: {e}")
