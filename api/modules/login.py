@@ -51,7 +51,10 @@ class LoginHandler:
                  sign_in_button = self.wait.until(EC.presence_of_element_located((By.CLASS_NAME, "ext-button-item ___frx9oy0")))
             if not sign_in_button:
                  sign_in_button = self.wait.until(EC.presence_of_element_located((By.CSS_SELECTOR, "[data-report-event='Signin_Submit']")))
-            sign_in_button.click()
+            if(sign_in_button.is_displayed() and sign_in_button.is_enabled()):
+                sign_in_button.click()
+            else:
+                sign_in_button.send_keys(Keys.ENTER)
             # self.driver.switch_to.active_element.send_keys(Keys.ENTER)
 
             # Click stay signed in
