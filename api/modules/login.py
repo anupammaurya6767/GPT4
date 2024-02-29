@@ -17,11 +17,10 @@ class LoginHandler:
             self.driver.get(url)
             # Click sign in button
             sign_in_button = self.wait.until(EC.presence_of_element_located((By.XPATH, "/html/body/header/div/a")))
-            time.sleep(5)
-            if(sign_in_button.is_displayed() and sign_in_button.is_enabled()):
-                sign_in_button.click()
-            else:
-                sign_in_button.send_keys(Keys.ENTER)
+            while(sign_in_button.is_displayed() and sign_in_button.is_enabled()):
+                time.sleep(1)
+            
+            sign_in_button.click()
 
             # Click on the sign-in with Microsoft button
             microsoft_sign_in_button = self.wait.until(EC.presence_of_element_located((By.XPATH, "/html/body/header/div/span/ul/li[1]/a")))
