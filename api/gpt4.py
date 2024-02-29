@@ -27,7 +27,7 @@ class GPT4:
         self.config = load_config(config_file)
 
         self.driver_path = self.config['CREDENTIALS']['driver_path']
-        if self.driver_path == None:
+        if self.driver_path == "None":
             self.driver = webdriver.Chrome(options = options)
         else:
             self.driver = webdriver.Chrome(executable_path=self.driver_path, options = options)
