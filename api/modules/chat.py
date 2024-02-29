@@ -24,7 +24,7 @@ class ChatHandler:
     def ask_question(self, question, max_t):
         try:
             self.driver.get("https://copilot.microsoft.com")
-            time.sleep(10)
+            time.sleep(50)
             total_area1 = self.wait.until(EC.presence_of_element_located((By.CLASS_NAME, "cib-serp-main")))
             total_area = total_area1.shadow_root
 
