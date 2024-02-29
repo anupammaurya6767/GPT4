@@ -18,7 +18,7 @@ class LoginHandler:
             # Click sign in button
             sign_in_button = self.wait.until(EC.presence_of_element_located((By.XPATH, "/html/body/header/div/a")))
             while(sign_in_button.is_displayed() and sign_in_button.is_enabled()):
-                time.sleep(1)
+                time.sleep(2)
             
             sign_in_button.click()
 
