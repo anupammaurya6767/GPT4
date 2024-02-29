@@ -16,7 +16,7 @@ class LoginHandler:
         try:
             self.driver.get(url)
             # Click sign in button
-            sign_in_button = self.wait.until(EC.presence_of_element_located((By.XPATH, "/html/body/header/div/a")))
+            sign_in_button = self.wait.until(EC.element_to_be_clickable((By.XPATH, "/html/body/header/div/a/div[1]/span/input")))
             sign_in_button.click()
 
             # Click on the sign-in with Microsoft button
