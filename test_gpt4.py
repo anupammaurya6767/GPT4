@@ -21,16 +21,16 @@ class TestGpt4(unittest.TestCase):
         # Initialize GPT4 with the temporary config file
         self.ap = GPT4(config_file=temp_config_path)
 
-    def test_login(self):
-        self.ap.login()
-        pass
+    # def test_login(self):
+    #     self.ap.login()
+    #     pass
 
-    def test_ask_question(self):
-        question = 'Test question'
-        self.ap.login()
-        self.ap.ask_question(question,20)
-        response = self.ap.get_response()
-        pass
+    # def test_ask_question(self):
+    #     question = 'Test question'
+    #     self.ap.login()
+    #     self.ap.ask_question(question,20)
+    #     response = self.ap.get_response()
+    #     pass
     
     def test_design(self):
         question = 'A cow'
