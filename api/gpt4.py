@@ -23,6 +23,7 @@ class GPT4:
         options = webdriver.ChromeOptions()
         options.add_argument('--log-level=3')
         options.add_argument('--headless= new')
+        self.config = load_config(config_file)
 
 
         self.driver_path = self.config['CREDENTIALS']['driver_path']
@@ -31,7 +32,6 @@ class GPT4:
         else:
             self.driver = webdriver.Chrome(executable_path=self.driver_path, options = options)
         self.login_handler = LoginHandler(self.driver)
-        self.config = load_config(config_file)
         self.url = "https://copilot.microsoft.com"
 
     def login(self):
