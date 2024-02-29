@@ -10,7 +10,7 @@ from selenium.webdriver.common.keys import Keys
 class LoginHandler:
     def __init__(self, driver):
         self.driver = driver
-        self.wait = WebDriverWait(driver, 10)
+        self.wait = WebDriverWait(driver, 50)
 
     def login(self, username, password,url):
         try:
