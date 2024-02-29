@@ -12,8 +12,14 @@ class TestGpt4(unittest.TestCase):
     def test_ask_question(self):
         question = 'Test question'
         self.ap.login()
-        self.ap.ask_question(question,10)
+        self.ap.ask_question(question,20)
         response = self.ap.get_response()
+        pass
+    
+    def test_design(self):
+        question = 'A cow'
+        self.ap.login()
+        self.ap.design(question)
         pass
 
     def tearDown(self):
