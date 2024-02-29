@@ -23,7 +23,7 @@ class ChatHandler:
 
     def ask_question(self, question, max_t):
         try:
-
+            time.sleep(10)
             total_area = self.wait.until(EC.presence_of_element_located((By.CLASS_NAME, "cib-serp-main"))).shadow_root
 
             self.driver.maximize_window()
