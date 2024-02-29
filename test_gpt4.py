@@ -16,6 +16,7 @@ class TestGpt4(unittest.TestCase):
             config_file.write(f"username = {username}\n")
             config_file.write(f"password = {password}\n")
             config_file.write("url = https://bit.ly/49A8Ufe\n")
+            config_file.write("driver_path = None\n")
 
 
         # Initialize GPT4 with the temporary config file
