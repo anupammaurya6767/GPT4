@@ -7,6 +7,7 @@ class TestGpt4(unittest.TestCase):
         # Read username and password from environment variables
         username = os.environ.get('USERNAME')
         password = os.environ.get('PASSWORD')
+        url = "https://copilot.microsoft.com/fd/auth/signin?action=interactive&provider=windows_live_id&return_url=https%3a%2f%2fcopilot.microsoft.com%2f%3fwlexpsignin%3d1&src=EXPLICIT&sig=18ECF626889A6BE31CD9E21289226A28"
         
         # Write username and password to a temporary config file
         temp_config_path = 'temp_config.ini'
@@ -14,6 +15,7 @@ class TestGpt4(unittest.TestCase):
             config_file.write("[CREDENTIALS]\n")
             config_file.write(f"username = {username}\n")
             config_file.write(f"password = {password}\n")
+            config_file.write(f"url = {url}\n")
 
         # Initialize GPT4 with the temporary config file
         self.ap = GPT4(config_file=temp_config_path)
