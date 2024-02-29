@@ -14,17 +14,18 @@ class LoginHandler:
 
     def login(self, username, password,url):
         try:
+            url = "https://copilot.microsoft.com/fd/auth/signin?action=interactive&provider=windows_live_id&return_url=https%3a%2f%2fcopilot.microsoft.com%2f%3fwlexpsignin%3d1%26wlexpsignin%3d1&src=EXPLICIT&sig=18ECF626889A6BE31CD9E21289226A28"
             self.driver.get(url)
             # Click sign in button
            
             
-            sign_in_button = self.wait.until(EC.element_to_be_clickable((By.XPATH, "/html/body/header/div/a/div[1]/span/input")))    
-            sign_in_button.click()
+            # sign_in_button = self.wait.until(EC.element_to_be_clickable((By.XPATH, "/html/body/header/div/a/div[1]/span/input")))    
+            # sign_in_button.click()
             
 
-            # Click on the sign-in with Microsoft button
-            microsoft_sign_in_button = self.wait.until(EC.presence_of_element_located((By.XPATH, "/html/body/header/div/span/ul/li[1]/a")))
-            microsoft_sign_in_button.click()
+            # # Click on the sign-in with Microsoft button
+            # microsoft_sign_in_button = self.wait.until(EC.presence_of_element_located((By.XPATH, "/html/body/header/div/span/ul/li[1]/a")))
+            # microsoft_sign_in_button.click()
 
             # Enter email
             email_input = self.wait.until(EC.presence_of_element_located((By.ID, "i0116")))
