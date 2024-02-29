@@ -16,25 +16,10 @@ class LoginHandler:
         try:
             self.driver.get(url)
             # Click sign in button
-            try:
-                sign_in_button = self.wait.until(EC.presence_of_element_located((By.XPATH, "/html/body/header/div/a/div[1]/span/input")))
-                # Check if the element is inside an iframe
-                is_in_iframe = self.driver.execute_script('return window !== window.top;')
-                if is_in_iframe:
-                    print('element is in iframe')
-                    # Switch to the iframe
-                    self.driver.switch_to.frame(0)  # You might need to adjust the frame index or provide other frame identifiers
-                    # Click on the button inside the iframe
-                    sign_in_button = self.wait.until(EC.element_to_be_clickable((By.XPATH, "/html/body/header/div/a/div[1]/span/input")))
-                    sign_in_button.click()
-                else:
-                    # Click on the button directly if it's not inside an iframe
-                    sign_in_button.click()
-            except Exception as e:
-                print(f"Error: {e}")
+           
             
-            # sign_in_button = self.wait.until(EC.element_to_be_clickable((By.XPATH, "/html/body/header/div/a/div[1]/span/input")))    
-            # sign_in_button.click()
+            sign_in_button = self.wait.until(EC.element_to_be_clickable((By.XPATH, "/html/body/header/div/a/div[1]/span/input")))    
+            sign_in_button.click()
             
 
             # Click on the sign-in with Microsoft button
