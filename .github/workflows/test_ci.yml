@@ -15,7 +15,7 @@ jobs:
           python-version: 3.11
   
       - name: Copy config.ini
-        run: echo "${{ secrets.CONFIG_INI }}" > config.ini
+        run:  echo "${{ secrets.CONFIG_INI }}" | base64 -d > config.ini
   
       - name: Install dependencies
         run: pip install -r requirements.txt
