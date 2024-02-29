@@ -25,7 +25,8 @@ class ChatHandler:
         try:
             self.driver.get("https://copilot.microsoft.com")
             time.sleep(10)
-            total_area = self.wait.until(EC.presence_of_element_located((By.CLASS_NAME, "cib-serp-main"))).shadow_root
+            total_area1 = self.wait.until(EC.presence_of_element_located((By.CLASS_NAME, "cib-serp-main")))
+            total_area = total_area1.shadow_root
 
             self.driver.maximize_window()
             self.max_t = max_t
