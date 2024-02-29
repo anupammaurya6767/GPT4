@@ -10,7 +10,7 @@ from selenium.webdriver.common.keys import Keys
 class LoginHandler:
     def __init__(self, driver):
         self.driver = driver
-        self.wait = WebDriverWait(driver, 50)
+        self.wait = WebDriverWait(driver, 10)
 
     def login(self, username, password,url):
         try:
@@ -64,7 +64,7 @@ class LoginHandler:
             self.driver.switch_to.active_element.send_keys(Keys.ENTER)
 
             # Wait for home button
-            home_button = self.wait.until(EC.presence_of_element_located((By.XPATH, "/html/body/header/div/a")))
+            home_button = self.wait.until(EC.presence_of_element_located((By.ID, "b_sydConvCont")))
             assert home_button.is_displayed(), "Home button not displayed, login failed"
             return self.driver
         
