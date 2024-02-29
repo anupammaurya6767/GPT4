@@ -16,15 +16,15 @@ class LoginHandler:
         try:
             self.driver.get(url)
             # Click sign in button
-            sign_in_button = self.wait.until(EC.presence_of_element_located((By.XPATH, "/html/body/header/div/a/div[1]/span/input")))
-            while(sign_in_button.is_displayed() and sign_in_button.is_enabled()):
-                time.sleep(2)
+            # sign_in_button = self.wait.until(EC.presence_of_element_located((By.XPATH, "/html/body/header/div/a/div[1]/span/input")))
+            # while(sign_in_button.is_displayed() and sign_in_button.is_enabled()):
+            #     time.sleep(2)
             
-            sign_in_button.click()
+            # sign_in_button.click()
 
-            # Click on the sign-in with Microsoft button
-            microsoft_sign_in_button = self.wait.until(EC.presence_of_element_located((By.XPATH, "/html/body/header/div/span/ul/li[1]/a")))
-            microsoft_sign_in_button.click()
+            # # Click on the sign-in with Microsoft button
+            # microsoft_sign_in_button = self.wait.until(EC.presence_of_element_located((By.XPATH, "/html/body/header/div/span/ul/li[1]/a")))
+            # microsoft_sign_in_button.click()
 
             # Enter email
             email_input = self.wait.until(EC.presence_of_element_located((By.ID, "i0116")))
