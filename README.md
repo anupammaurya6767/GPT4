@@ -64,7 +64,7 @@ pip install api-gpt4
 
     ```python
     question = 'What is the meaning of life?'
-    ap.ask_question(question, max_t=10)
+    ap.ask_question(question)
     response = ap.get_response()
     ```
 
