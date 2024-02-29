@@ -64,7 +64,7 @@ class LoginHandler:
             self.driver.switch_to.active_element.send_keys(Keys.ENTER)
 
             # Wait for home button
-            home_button = self.wait.until(EC.presence_of_element_located((By.ID, "b_sydConvCont")))
+            home_button = self.wait.until(EC.presence_of_element_located((By.CLASS_NAME, "id_avatar")))
             assert home_button.is_displayed(), "Home button not displayed, login failed"
             return self.driver
         
