@@ -17,6 +17,7 @@ class LoginHandler:
             self.driver.get(url)
             # Click sign in button
             sign_in_button = self.wait.until(EC.presence_of_element_located((By.XPATH, "/html/body/header/div/a")))
+            time.sleep(2)
             if(sign_in_button.is_displayed() and sign_in_button.is_enabled()):
                 sign_in_button.click()
             else:
