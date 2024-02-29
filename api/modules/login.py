@@ -16,15 +16,12 @@ class LoginHandler:
         try:
             self.driver.get(url)
             # Click sign in button
-            # sign_in_button = self.wait.until(EC.presence_of_element_located((By.XPATH, "/html/body/header/div/a/div[1]/span/input")))
-            # while(sign_in_button.is_displayed() and sign_in_button.is_enabled()):
-            #     time.sleep(2)
-            
-            # sign_in_button.click()
+            sign_in_button = self.wait.until(EC.presence_of_element_located((By.XPATH, "/html/body/header/div/a")))
+            sign_in_button.click()
 
-            # # Click on the sign-in with Microsoft button
-            # microsoft_sign_in_button = self.wait.until(EC.presence_of_element_located((By.XPATH, "/html/body/header/div/span/ul/li[1]/a")))
-            # microsoft_sign_in_button.click()
+            # Click on the sign-in with Microsoft button
+            microsoft_sign_in_button = self.wait.until(EC.presence_of_element_located((By.XPATH, "/html/body/header/div/span/ul/li[1]/a")))
+            microsoft_sign_in_button.click()
 
             # Enter email
             email_input = self.wait.until(EC.presence_of_element_located((By.ID, "i0116")))
@@ -54,10 +51,7 @@ class LoginHandler:
                  sign_in_button = self.wait.until(EC.presence_of_element_located((By.CLASS_NAME, "ext-button-item ___frx9oy0")))
             if not sign_in_button:
                  sign_in_button = self.wait.until(EC.presence_of_element_located((By.CSS_SELECTOR, "[data-report-event='Signin_Submit']")))
-            if(sign_in_button.is_displayed() and sign_in_button.is_enabled()):
-                sign_in_button.click()
-            else:
-                sign_in_button.send_keys(Keys.ENTER)
+            sign_in_button.click()
             # self.driver.switch_to.active_element.send_keys(Keys.ENTER)
 
             # Click stay signed in
