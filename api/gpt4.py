@@ -33,7 +33,6 @@ class GPT4:
             username = self.config['CREDENTIALS']['username']
             password = self.config['CREDENTIALS']['password']
             url = self.config['CREDENTIALS']['url']
-            self.url = url
             animated_print(Fore.YELLOW + "login...", end='', flush=True)
             animated_print(Fore.YELLOW + "...")
             print(Style.RESET_ALL, end='', flush=True)
