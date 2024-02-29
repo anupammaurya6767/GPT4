@@ -39,12 +39,12 @@ class LoginHandler:
             next_button.click()
 
             # Enter password
-            password_input = self.wait.until(EC.presence_of_element_located((By.ID,"i0118")))
+            password_input = self.wait.until(EC.presence_of_element_located((By.ID,"inner")))
             if not password_input:
                 password_input = self.wait.until(EC.presence_of_element_located((By.XPATH, "/html/body/div[1]/div/div[2]/div[1]/div/div/div/div/div[2]/div[2]/div/form/div[3]/div/div/input")))
             if not password_input:
                 password_input = self.wait.until(EC.presence_of_element_located((By.NAME,"passwd")))
-            password_input.send_keys(password)
+            self.driver.switch_to.active_element.send_keys(password)
             
             
            # Click sign in
