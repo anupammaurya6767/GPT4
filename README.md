@@ -34,6 +34,9 @@
 
 [![GPT4][product-screenshot]](https://github.com/anupammaurya6767/GPT4/raw/main/assets/x%20vfdzv.png)
 
+[![Watch the video](https://img.youtube.com/vi/Km1RiNiwxqs/0.jpg)](https://www.youtube.com/watch?v=Km1RiNiwxqs)
+
+
 The **GPT-4 API** is an interface for interacting with the powerful GPT-4 language model. It allows you to generate natural language text, perform question-answering tasks, and more. Whether you're building chatbots, content generators, or creative writing tools, GPT-4 has got you covered!
 
 Here's why:
