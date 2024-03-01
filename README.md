@@ -14,7 +14,7 @@
 <br />
 <div align="center">
   <a href="https://github.com/anupammaurya6767/GPT4">
-    <img src="https://github.com/anupammaurya6767/GPT4/raw/main/assets/Designer.png" alt="Logo" width="80" height="80">
+    <img src="https://github.com/anupammaurya6767/GPT4/raw/main/assets/Designer.png" alt="Logo" width="230" height="230">
   </a>
 
   <h3 align="center">GPT4</h3>
@@ -136,3 +136,17 @@ Contributions are welcome! If you find a bug or have an enhancement idea, please
 ## License
 
 This project is licensed under the MIT License - see the [LICENSE](LICENSE) file for details.
+
+<!-- MARKDOWN LINKS & IMAGES -->
+<!-- https://www.markdownguide.org/basic-syntax/#reference-style-links -->
+[contributors-shield]: https://img.shields.io/github/contributors/anupammaurya6767/GPT4.svg?style=for-the-badge
+[contributors-url]: https://github.com/anupammaurya6767/GPT4/graphs/contributors
+[forks-shield]: https://img.shields.io/github/forks/anupammaurya6767/GPT4.svg?style=for-the-badge
+[forks-url]: https://github.com/anupammaurya6767/GPT4/network/members
+[stars-shield]: https://img.shields.io/github/stars/anupammaurya6767/GPT4.svg?style=for-the-badge
+[stars-url]: https://github.com/anupammaurya6767/GPT4/stargazers
+[issues-shield]: https://img.shields.io/github/issues/anupammaurya6767/GPT4.svg?style=for-the-badge
+[issues-url]: https://github.com/anupammaurya6767/GPT4/issues
+[license-shield]: https://img.shields.io/github/license/anupammaurya6767/GPT4.svg?style=for-the-badge
+[license-url]: https://github.com/anupammaurya6767/GPT4/blob/main/LICENSE
+[product-screenshot]: https://github.com/anupammaurya6767/GPT4/raw/main/assets/x%20vfdzv.png
