@@ -13,7 +13,7 @@
 <br />
 <div align="center">
   <a href="https://github.com/anupammaurya6767/GPT4">
-    <img src="https://github.com/anupammaurya6767/GPT4/raw/main/assets/Designer.png" alt="Logo" width="230" height="230">
+    <img src="https://github.com/anupammaurya6767/GPT4/raw/main/assets/gpt4.png" alt="Logo" width="230" height="230">
   </a>
 
   <h3 align="center">GPT4</h3>
