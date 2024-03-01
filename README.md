@@ -1,6 +1,8 @@
 # GPT-4 API
-![GPT4](https://github.com/anupammaurya6767/GPT4/blob/main/assets/Designer.png){: width: 230 style="float:right;"} 
-
+<span class="right">
+![GPT4](https://github.com/anupammaurya6767/GPT4/blob/main/assets/Designer.png)
+</span>
+.right img { float: right; width:230px; }
 
 The GPT4 API project aims to provide an automated interface for interacting with the GPT-4 (Generative Pre-trained Transformer 4) model developed by OpenAI. GPT-4 is a state-of-the-art natural language processing model capable of generating human-like text based on input prompts.
 
