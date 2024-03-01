@@ -1,11 +1,52 @@
-# GPT-4 API
-<img align='right' src="https://github.com/anupammaurya6767/GPT4/raw/main/assets/Designer.png" width="230">
-The GPT4 API project aims to provide an automated interface for interacting with the GPT-4 (Generative Pre-trained Transformer 4) model developed by OpenAI. GPT-4 is a state-of-the-art natural language processing model capable of generating human-like text based on input prompts.
+<div id="top"></div>
+
+<!-- PROJECT SHIELDS -->
+[![Contributors][contributors-shield]][contributors-url]
+[![Forks][forks-shield]][forks-url]
+[![Stargazers][stars-shield]][stars-url]
+[![Issues][issues-shield]][issues-url]
+[![MIT License][license-shield]][license-url]
+[![LinkedIn][linkedin-shield]][linkedin-url]
 
 
-## Description
+
+<!-- PROJECT LOGO -->
+<br />
+<div align="center">
+  <a href="https://github.com/anupammaurya6767/GPT4">
+    <img src="https://github.com/anupammaurya6767/GPT4/raw/main/assets/Designer.png" alt="Logo" width="80" height="80">
+  </a>
+
+  <h3 align="center">GPT4</h3>
+
+  <p align="center">
+     GPT4-API
+    <br />
+    ·
+    <a href="https://github.com/anupammaurya6767/GPT4/issues">Report Bug</a>
+    ·
+    <a href="https://github.com/anupammaurya6767/GPT4/issues">Request Feature</a>
+  </p>
+</div>
+
+
+<!-- ABOUT THE PROJECT -->
+## About The Project
+
+[![GPT4][product-screenshot]](https://github.com/anupammaurya6767/GPT4/raw/main/assets/x%20vfdzv.png)
 
 The **GPT-4 API** is an interface for interacting with the powerful GPT-4 language model. It allows you to generate natural language text, perform question-answering tasks, and more. Whether you're building chatbots, content generators, or creative writing tools, GPT-4 has got you covered!
+
+Here's why:
+* Free access to GPT-4.😀
+* Seamless integration into your code.😋
+* Generate text and images effortlessly.😮
+* Explore the GPT-4 API on GitHub.🌟
+* Don't forget to give it a star, fork, and contribute. 😎
+
+
+<p align="right">(<a href="#top">back to top</a>)</p>
+
 
 ## Table of Contents
 
