@@ -1,5 +1,5 @@
 # GPT-4 API
-<img align='right' src="https://github.com/anupammaurya6767/GPT4/blob/main/assets/Designer.png" width="230">
+<img align='right' src="https://github.com/anupammaurya6767/GPT4/raw/main/assets/Designer.png" width="230">
 The GPT4 API project aims to provide an automated interface for interacting with the GPT-4 (Generative Pre-trained Transformer 4) model developed by OpenAI. GPT-4 is a state-of-the-art natural language processing model capable of generating human-like text based on input prompts.
 
 
@@ -34,7 +34,7 @@ Make sure you have the following installed-
 2. Install dependencies:
 
     ```bash
-    pip install selenium
+    pip install -r requirements.txt
     ```
 
     #### Or
@@ -68,7 +68,14 @@ pip install api-gpt4
     response = ap.get_response()
     ```
 
-4. Close the API connection when done:
+4. Image Generation:
+
+    ```python
+    prompt = 'A man on bike'
+    response = ap.design(prompt)
+    ```
+
+5. Close the API connection when done:
 
     ```python
     ap.close()

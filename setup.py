@@ -2,7 +2,7 @@ from setuptools import setup, find_packages
 
 setup(
     name='api_gpt4',
-    version='1.0.1',
+    version='1.0.6',
     description='The GPT-4 API is an interface for interacting with the powerful GPT-4 language model. It allows you to generate natural language text, perform question-answering tasks, and more. Whether you\'re building chatbots, content generators, or creative writing tools, GPT-4 has got you covered!',
     long_description=open('README.md').read(),
     long_description_content_type='text/markdown',
@@ -22,4 +22,5 @@ setup(
         'beautifulsoup4==4.12.2',
         'colorama==0.4.6'
     ],
+    setup_requires=['wheel'],
 )
