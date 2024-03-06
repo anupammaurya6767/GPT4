@@ -17,18 +17,14 @@ import re
 class ChatHandler:
     def __init__(self, driver):
         self.driver = driver
-        self.wait = WebDriverWait(driver, 10)
+        self.wait = WebDriverWait(driver, 120)
         self.response = ""
         self.max_t = 50
 
     def ask_question(self, question, max_t):
         try:
-            self.driver.get("https://copilot.microsoft.com")
-            time.sleep(50)
-            total_area1 = self.wait.until(EC.presence_of_element_located((By.CLASS_NAME, "cib-serp-main")))
-            total_area = total_area1.shadow_root
+            total_area = self.wait.until(EC.presence_of_element_located((By.CLASS_NAME, "cib-serp-main"))).shadow_root
 
-            self.driver.maximize_window()
             self.max_t = max_t
 
             a1_ = total_area.find_element(By.ID, "cib-action-bar-main").shadow_root
