@@ -10,13 +10,14 @@ from selenium.webdriver.common.keys import Keys
 class LoginHandler:
     def __init__(self, driver):
         self.driver = driver
-        self.wait = WebDriverWait(driver, 10)
+        self.wait = WebDriverWait(driver, 120)
 
     def login(self, username, password,url):
         try:
             self.driver.get(url)
+            time.sleep(5)
             # Click sign in button
-            sign_in_button = self.wait.until(EC.element_to_be_clickable((By.XPATH, "/html/body/header/div/a/div[1]/span/input")))
+            sign_in_button = self.wait.until(EC.element_to_be_clickable((By.XPATH, "/html/body/header/div/a")))
             sign_in_button.click()
 
             # Click on the sign-in with Microsoft button
