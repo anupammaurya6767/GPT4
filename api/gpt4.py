@@ -8,6 +8,7 @@ import logging
 from api.handlers.animation import animated_print,animated_design
 from colorama import Fore, Style
 from api.handlers.banner import print_banner
+from api.handlers.convert_to_markdown import convert_text_to_markdown
 
 
 
@@ -22,9 +23,12 @@ class GPT4:
         logging.basicConfig(level=logging.WARNING)
         options = webdriver.ChromeOptions()
         options.add_argument('--log-level=3')
-        options.add_argument('--headless= new')
-
+        options.add_argument("--window-size=1920,1080")
+        options.add_argument('--no-sandbox')
+        options.add_argument('--headless=new')
+        options.add_argument('--disable-dev-shm-usage')
         self.config = load_config(config_file)
+
 
         self.driver_path = self.config['CREDENTIALS']['driver_path']
         if self.driver_path == "None":
@@ -33,13 +37,13 @@ class GPT4:
             self.driver = webdriver.Chrome(executable_path=self.driver_path, options = options)
         self.login_handler = LoginHandler(self.driver)
         self.url = "https://copilot.microsoft.com"
-        
+
     def login(self):
         try:
             username = self.config['CREDENTIALS']['username']
             password = self.config['CREDENTIALS']['password']
             url = self.config['CREDENTIALS']['url']
-            animated_print(Fore.YELLOW + "login...", end='', flush=True)
+            animated_print(Fore.YELLOW + "login...",0.1, end='', flush=True)
             animated_print(Fore.YELLOW + "...")
             print(Style.RESET_ALL, end='', flush=True)
             self.driver = self.login_handler.login(username, password,self.url) 
@@ -50,7 +54,7 @@ class GPT4:
 
 
     def ask_question(self, question,max_t=50):
-        animated_print(Fore.MAGENTA + "Generating a suitable response...",3, end='', flush=True)
+        animated_print(Fore.MAGENTA + "Generating a suitable response...",0.1, end='\n', flush=True)
         self.chat_handler = ChatHandler(self.driver)
         self.chat_handler.ask_question(question,max_t)
 
@@ -58,9 +62,17 @@ class GPT4:
         return self.chat_handler.get_response()
     
     def design(self,query,max_t=50):
-        animated_design(Fore.BLUE + "Bringing Your Ideas To Life...",5)
+        animated_design(Fore.BLUE + "Bringing Your Ideas To Life...",0.1, end='\n', flush=True)
         self.design_handler = DesignHandler(self.driver)
         return self.design_handler.design(query,max_t)
-
+    
+    def generate_readme(self,url):
+        self.chat_handler = ChatHandler(self.driver)
+        self.chat_handler.ask_question("Please analyze the codebase of the given GitHub repository"+url+"and generate a professional README.md file in markdown format that provides comprehensive information about the project. add badges from shields.io for license, last commit, top language, and repository language count. on top under the logo , the logo you have to generate for the project as well  The generated README should include details about the project's purpose, features, technologies used, getting started instructions, git clone,contribution guidelines, license information, and contact details,Give it in Markdown Format",50)
+        response_text = self.chat_handler.get_response()['response']
+        # Convert the text format response to Markdown format
+        response_markdown = convert_text_to_markdown(response_text)
+        return response_markdown
+    
     def close(self):
         self.driver.quit()
