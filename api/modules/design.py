@@ -18,18 +18,15 @@ from bs4 import BeautifulSoup
 class DesignHandler:
     def __init__(self, driver):
         self.driver = driver
-        self.wait = WebDriverWait(driver, 10)
+        self.wait = WebDriverWait(driver, 120)
         self.response = []
         self.max_t = 50
 
     def design(self, query, max_t):
         try:
-            self.driver.get("https://copilot.microsoft.com")
             self.response = []
-            time.sleep(10)
             total_area = self.wait.until(EC.presence_of_element_located((By.CLASS_NAME, "cib-serp-main"))).shadow_root
 
-            self.driver.maximize_window()
             self.max_t = max_t
 
             a1_ = total_area.find_element(By.ID, "cib-action-bar-main").shadow_root
